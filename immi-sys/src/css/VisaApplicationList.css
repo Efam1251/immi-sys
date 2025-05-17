@@ -1,0 +1,104 @@
+@import '../css/UtilList.css'; /* Import universal styles */
+
+/* ===================== Visa Application List Component Styles ===================== */
+.visa-application-list-container {
+  margin: auto;
+  width: 95%;
+  max-width: 1400px; /* Keeps width consistent */
+  background-color: #ffffff; /* White background for the container */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Visa Application Table Header */
+.visa-application-list-header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+  margin-left: 30px;
+}
+
+/* Table Styling */
+.visa-application-list-container .list-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures exact column widths */
+  background-color: #ffffff; /* Ensures background stays white */
+}
+
+/* === Column Widths === */
+.visa-application-list-container .list-table th.visaId,
+.visa-application-list-container .list-table td.visaId {
+  width: 5%;
+}
+
+.visa-application-list-container .list-table th.applicant,
+.visa-application-list-container .list-table td.applicant {
+  width: 25%;
+}
+
+.visa-application-list-container .list-table th.visaType,
+.visa-application-list-container .list-table td.visaType {
+  width: 15%;
+}
+
+.visa-application-list-container .list-table th.country,
+.visa-application-list-container .list-table td.country {
+  width: 15%;
+}
+
+.visa-application-list-container .list-table th.reference,
+.visa-application-list-container .list-table td.reference {
+  width: 10%;
+}
+
+.visa-application-list-container .list-table th.date,
+.visa-application-list-container .list-table td.date {
+  width: 10%;
+}
+
+.visa-application-list-container .list-table th.submissionDate,
+.visa-application-list-container .list-table td.submissionDate {
+  width: 10%;
+}
+
+.visa-application-list-container .list-table th.status,
+.visa-application-list-container .list-table td.status {
+  width: 10%;
+}
+
+/* Row Styling with Zebra Striping */
+.visa-application-list-container .list-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.visa-application-list-container .list-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+/* Optional Scrollable Container */
+.visa-application-list-container .list-table-container {
+  max-height: 450px; /* Set max height for scrollable area */
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+/* Row Padding and Styling */
+.visa-application-list-container .list-table tbody td {
+  padding: 10px 15px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  overflow-wrap: break-word;
+}
+
+/* Hoverable Row */
+.list-clickable-row:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  font-weight: bold;
+}
+

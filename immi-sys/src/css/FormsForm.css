@@ -1,0 +1,104 @@
+@import '../css/UtilForm.css'; /* Shared form styles if needed */
+
+/* ===================== Container ===================== */
+.forms-table-container {
+  margin: 10px auto 20px auto;
+  width: 95%;
+  max-width: 1400px;
+  overflow-x: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+/* ===================== Title/Header ===================== */
+.forms-table-container h2 {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+  color: #333;
+  font-size: 20px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ===================== Search Input ===================== */
+.list-search-input-container {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fafafa;
+}
+
+.list-search-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+}
+
+.list-search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+/* ===================== Scrollable Table Body ===================== */
+.list-table-container {
+  max-height: 450px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.forms-table tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+/* ===================== Row Hover Effect ===================== */
+.clickable-form-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.clickable-form-row:hover {
+  background-color: #f0f0f0;
+}
+
+/* ===================== Column Widths ===================== */
+.forms-id {
+  width: 5%;
+}
+
+.forms-name {
+  width: 10%;
+}
+
+.forms-description {
+  width: 40%;
+}
+
+.forms-link {
+  width: 45%;
+  word-break: break-word;
+}
+
+/* ===================== Responsive Styling ===================== */
+@media (max-width: 768px) {
+  .forms-table th,
+  .forms-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .forms-table th,
+  .forms-table td {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+}

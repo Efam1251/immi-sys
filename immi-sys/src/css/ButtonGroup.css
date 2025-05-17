@@ -1,0 +1,97 @@
+.button-group-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 5px;
+}
+
+.btn-group {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  text-align: right;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background: #d3d2d2;
+  border-radius: 1em;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.btn-group .btn {
+  position: relative;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.btn-group .btn img {
+  width: 30px;
+  height: 30px;
+  display: block;
+  margin: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect: Lift button with subtle glow */
+.btn-group .btn:hover {
+  transform: translateY(-3px); /* Slight lift */
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); /* Elevated shadow */
+}
+
+/* Active effect: Pressed look */
+.btn-group .btn:active {
+  transform: translateY(2px); /* Press down */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2); /* Inner shadow for pressed effect */
+}
+
+/* Button focus (keyboard navigation) */
+.btn-group .btn:focus {
+  outline: 1.5px solid #007bff; /* Focus ring */
+  outline-offset: 3px;
+}
+
+/* Icon-specific effects */
+.btn-group .btn:hover img {
+  transform: scale(1.4); /* Slight zoom for icon */
+}
+
+.btn-group .btn:active img {
+  transform: scale(0.9); /* Shrink icon when active */
+}
+
+/* Add unique background effects on hover for each button */
+#newRecordBtn:hover {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+}
+
+#saveButton:hover {
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
+#displayRecordBtn:hover {
+  background: linear-gradient(135deg, #fbe9e7, #ffccbc);
+}
+
+#firstRecordBtn:hover {
+  background: linear-gradient(135deg, #ede7f6, #d1c4e9);
+}
+
+#previousRecordBtn:hover {
+  background: linear-gradient(135deg, #f9fbe7, #f0f4c3);
+}
+
+#nextRecordBtn:hover {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+}

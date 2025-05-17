@@ -1,0 +1,250 @@
+/* ------------------------------------------
+   Layout & Container Styling
+------------------------------------------ */
+.filter-container {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.report-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+/* ------------------------------------------
+   Filter Section
+------------------------------------------ */
+.filter-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.filter-row label {
+  font-weight: 500;
+  margin-right: 0.5rem;
+  color: #374151;
+}
+
+.filter-row input[type="date"] {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* ------------------------------------------
+   Table Styling
+------------------------------------------ */
+.report-table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  table-layout: fixed;
+}
+
+/* Header */
+.report-table thead {
+  background-color: #f3f4f6;
+  color: #6b7280;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* Header text alignment */
+.report-table th {
+  text-align: center;
+}
+
+/* Cell Base Styles */
+.report-table th,
+.report-table td {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  display: table-cell;
+}
+
+/* Optional Alignment Helpers */
+.report-table td.text-right {
+  text-align: right;
+}
+
+/* Row Hover */
+.report-table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Totals Row */
+.report-total-row {
+  font-weight: 600;
+  background-color: #f3f4f6;
+}
+
+/* ------------------------------------------
+Column Widths
+------------------------------------------ */
+.report-table th:nth-child(1),
+.report-table td:nth-child(1) {
+  width: 10%;
+}
+
+.report-table th:nth-child(2),
+.report-table td:nth-child(2) {
+  width: 25%;  /* Adjusted to fit all columns */
+}
+
+.report-table th:nth-child(3),
+.report-table td:nth-child(3) {
+  width: 12%;  /* Adjusted width */
+  text-align: center;
+}
+
+.report-table th:nth-child(4),
+.report-table td:nth-child(4),
+.report-table th:nth-child(5),
+.report-table td:nth-child(5),
+.report-table th:nth-child(6),
+.report-table td:nth-child(6) {
+  width: 12%;  /* Adjusted width */
+}
+
+.report-table th:nth-child(7),
+.report-table td:nth-child(7) {
+  width: 12%;  /* New column for Fees */
+}
+
+.report-table th:nth-child(8),
+.report-table td:nth-child(8) {
+  width: 12%;  /* New column for Profit */
+}
+
+.report-table th {
+  text-align: center;
+}
+
+/* ------------------------------------------
+   Scrollable Table Body with Sticky Header/Footer
+------------------------------------------ */
+.table-wrapper {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table-wrapper thead,
+.table-wrapper tfoot {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-wrapper tbody {
+  display: block;
+  max-height: 400px;
+  /* Adjustable */
+  overflow-y: auto;
+}
+
+.table-wrapper tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+/* Sticky Header */
+.table-wrapper thead th,
+.table-wrapper tfoot td {
+  position: sticky;
+  background-color: #f3f4f6;
+  z-index: 2;
+}
+
+.table-wrapper thead th {
+  top: 0;
+}
+
+.table-wrapper tfoot td {
+  bottom: 0;
+}
+
+/* Sticky Footer */
+.table-wrapper tfoot {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-wrapper tfoot tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  position: sticky;
+  bottom: 0;
+  background-color: #f3f4f6;
+  z-index: 1;
+}
+
+.table-wrapper th,
+.table-wrapper td {
+  box-sizing: border-box;
+}
+/* ------------------------------------------
+   Utility Text Colors and Alignment
+------------------------------------------ */
+.text-green  { color: #16a34a; }
+.text-red    { color: #dc2626; }
+.text-center { text-align: center; color: #9ca3af; }
+.text-left   { text-align: left;   color: #9ca3af; }
+
+/* ------------------------------------------
+   Print Styles
+------------------------------------------ */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .report-container,
+  .report-container * {
+    visibility: visible;
+  }
+
+  .report-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .filter-row {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-wrapper {
+    overflow-x: auto;
+  }
+}

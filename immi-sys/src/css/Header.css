@@ -1,0 +1,48 @@
+/* Header.css */
+/* HeaderWithButtons.css */
+
+/* Header Section */
+.header-container {
+  background-color: #4CAF50; /* Example background color */
+  padding: 20px;
+  color: white;
+  text-align: center;
+  position: sticky; /* Make the header stick to the top */
+  top: 0; /* Stick to the top of the page */
+  z-index: 1000; /* Ensure it's above other content */
+  width: 100%;
+}
+
+.company-info h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.company-info p {
+  margin: 5px 0;
+}
+
+/* Button Group Section */
+.button-group {
+  position: sticky; /* Make it sticky */
+  top: 80px; /* Adjust top to leave space for the header */
+  background-color: #f8f9fa; /* Example background color */
+  padding: 10px 0;
+  z-index: 999; /* Ensure it stays on top of other content */
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background-color: #0056b3;
+}

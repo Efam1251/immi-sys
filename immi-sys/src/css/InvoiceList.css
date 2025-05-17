@@ -1,0 +1,216 @@
+@import '../css/UtilList.css'; /* Import universal styles */
+
+/* ===================== Invoice List Container ===================== */
+.invoice-list-container {
+  margin: auto;
+  width: 95%;
+  max-width: 1400px; /* Keeps width consistent */
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Invoice List Header */
+.invoice-list-header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* Search Field Styles */
+.invoice-list-container .search-field-container {
+  margin: 10px auto;
+  text-align: left;
+  padding-left: 30px;
+}
+
+.invoice-list-container .search-field-input {
+  width: 90%;
+  max-width: 500px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.invoice-list-container .search-field-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ===================== Invoice List Table Styles ===================== */
+.invoice-table-container {
+  max-height: 300px; /* or any height you prefer */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.invoice-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice-list-table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.invoice-list-container .invoice-list-table {
+  font-size: 14px;
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table Header Styles */
+.invoice-list-container .invoice-list-table thead {
+  background-color: #f4f4f4; /* Light background for the header */
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.invoice-list-container .invoice-list-table thead,
+.invoice-list-container .invoice-list-table tbody {
+  table-layout: fixed;
+}
+
+.invoice-list-container .invoice-list-table th {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* === Column Width Adjustments === */
+.invoice-list-container .invoice-list-table th.invoice-id,
+.invoice-list-container .invoice-list-table td.invoice-id {
+  width: 5%;
+}
+
+.invoice-list-container .invoice-list-table th.invoice-number,
+.invoice-list-container .invoice-list-table td.invoice-number {
+  width: 10%;
+}
+
+.invoice-list-container .invoice-list-table th.invoice-customer,
+.invoice-list-container .invoice-list-table td.invoice-customer {
+  text-align: left;
+  width: 40%;
+}
+
+.invoice-list-container .invoice-list-table th.invoice-date,
+.invoice-list-container .invoice-list-table td.invoice-date {
+  width: 15%;
+  text-align: center;
+}
+
+.invoice-list-container .invoice-list-table th.invoice-total,
+.invoice-list-container .invoice-list-table td.invoice-total {
+  text-align: right;
+  width: 10%;
+}
+
+.invoice-list-container .invoice-list-table th.invoice-balance,
+.invoice-list-container .invoice-list-table td.invoice-balance {
+  text-align: right;
+  width: 10%;
+}
+
+.invoice-list-container .invoice-list-table th.invoice-status,
+.invoice-list-container .invoice-list-table td.invoice-status {
+  width: 10%;
+}
+
+/* Row Zebra Striping */
+.invoice-list-container .invoice-list-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.invoice-list-container .invoice-list-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+/* Row Padding and Styling */
+.invoice-list-container .invoice-list-table tbody td {
+  padding: 10px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  overflow-wrap: break-word;
+}
+
+/* Clickable Row Styling */
+.invoice-list-container .clickable-invoice-row {
+  cursor: pointer;
+}
+
+.invoice-list-container .clickable-invoice-row:hover {
+  font-weight: bold;
+  background-color: #e0dede;
+  color: rgba(6, 18, 240, 0.915);
+}
+
+/* Footer Styling */
+.invoice-list-container .invoice-list-table tfoot tr {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+.invoice-list-container .invoice-list-total {
+  width: 15%;
+  text-align: right;
+  font-size: 20px;
+}
+
+/* Scrollable Table */
+.invoice-list-container .invoice-list-table-container {
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+  .invoice-list-container .invoice-list-table th,
+  .invoice-list-container .invoice-list-table td {
+    font-size: 12px;
+  }
+
+  .invoice-list-container .invoice-list-table th.invoice-id,
+  .invoice-list-container .invoice-list-table td.invoice-id {
+    width: 5%;
+  }
+
+  .invoice-list-container .invoice-list-table th.invoice-number,
+  .invoice-list-container .invoice-list-table td.invoice-number {
+    width: 10%;
+  }
+
+  .invoice-list-container .invoice-list-table th.invoice-customer,
+  .invoice-list-container .invoice-list-table td.invoice-customer {
+    text-align: left;
+    width: 40%;
+  }
+
+  .invoice-list-container .invoice-list-table th.invoice-date,
+  .invoice-list-container .invoice-list-table td.invoice-date {
+    width: 15%;
+  }
+
+  .invoice-list-container .invoice-list-table th.invoice-total,
+  .invoice-list-container .invoice-list-table td.invoice-total {
+    text-align: right;
+    width: 10%;
+  }
+
+  .invoice-list-container .invoice-list-table th.invoice-balance,
+  .invoice-list-container .invoice-list-table td.invoice-balance {
+    text-align: right;
+    width: 10%;
+  }
+
+  .invoice-list-container .invoice-list-table th.invoice-status,
+  .invoice-list-container .invoice-list-table td.invoice-status {
+    width: 10%;
+  }
+}

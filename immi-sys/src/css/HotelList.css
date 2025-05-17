@@ -1,0 +1,36 @@
+@import '../css/UtilList.css'; /* Import universal styles */
+
+/* ===================== Hotel List Component Styles ===================== */
+
+.hotel-list-container {
+    margin: auto;
+    width: 100%;
+    max-width: 1400px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-list-header {
+    text-align: center;
+}
+
+/* Column Width Customization */
+.hotel-id {
+    width: 10%;
+}
+
+.hotel-name {
+    width: 40%;
+}
+
+.hotel-phone {
+    width: 50%;
+}
+
+/* Optional override for scroll container in customer context */
+.hotel-list-container .list-table-container {
+    max-height: 450px;
+    overflow-y: auto;
+}

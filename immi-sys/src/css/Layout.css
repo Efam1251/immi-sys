@@ -1,0 +1,31 @@
+/* Layout.css */
+.layout-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Menu styles — floating on top */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;         /* Menu width */
+  height: 100vh;
+  background-color: rgba(44, 31, 5, 0.98);
+ /* semi-transparent background */
+  color: white;
+  z-index: 1000;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Main content styles — this is Outlet area */
+.main-content {
+  margin-left: 250px;  /* Offset by menu width */
+  height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f7f7f7;
+}

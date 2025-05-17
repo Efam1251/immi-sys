@@ -1,0 +1,83 @@
+/* General layout for the dashboard page */
+.dashboard-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  gap: 10px;
+  flex-wrap: wrap;
+  background-color: f4f7fc;
+  position: relative;
+  /* ⬅ Add this */
+  z-index: 0;
+  /* ⬅ Lower than menu-bar and submenu */
+  overflow: visible;
+  /* ✅ Required */
+}
+
+/* Dashboard Logo Image Styling */
+.dashboard-logo-image {
+  width: 250px;
+  /* Adjust logo width */
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  /* Rounded corners for the logo */
+  margin-top: 150px;
+  /* Space above the logo */
+  margin-bottom: 140px;
+  /* Space above the logo */
+}
+
+/* Dashboard Text Container Styling */
+.dashboard-text-container {
+  max-width: 600px;
+  /* Limit text container width */
+  text-align: left;
+  /* Align text to the left */
+  color: #333;
+  /* Dark text color for readability */
+  margin-top: 150px;
+  /* Space above the text */
+  margin-bottom: 140px;
+  /* Space above the logo */
+}
+
+/* Heading Styling */
+.dashboard-text-container h1 {
+  font-size: 2.5rem;
+  /* Larger font size for the heading */
+  font-weight: bold;
+  /* Make the heading bold */
+  color: #1c92d2;
+  /* Brand color for the heading */
+  margin-bottom: 1rem;
+  /* Space below the heading */
+}
+
+/* Paragraph Styling */
+.dashboard-text-container p {
+  font-size: 1.1rem;
+  /* Slightly larger font size for better readability */
+  line-height: 1.6;
+  /* Increase line height for better text flow */
+  color: #555;
+  /* Slightly lighter text color for the paragraph */
+  margin-bottom: 20px;
+  /* Bottom margin for spacing */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .dashboard-page {
+    flex-direction: column;
+    /* Stack items vertically on small screens */
+    text-align: center;
+    /* Center-align the text */
+  }
+
+  .dashboard-text-container {
+    text-align: center;
+    /* Center the text on small screens */
+  }
+}

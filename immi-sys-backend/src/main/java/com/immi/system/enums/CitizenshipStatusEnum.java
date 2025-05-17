@@ -1,0 +1,16 @@
+package com.immi.system.enums;
+
+public enum CitizenshipStatusEnum {
+    APPLIED,
+    BIOMETRICS_SCHEDULED,
+    BIOMETRICS_COMPLETED,
+    INTERVIEW_SCHEDULED,
+    INTERVIEW_PASSED,
+    INTERVIEW_FAILED,
+    OATH_SCHEDULED,
+    OATH_COMPLETED,
+    APPROVED,
+    DENIED,
+    WITHDRAWN,
+    ON_HOLD
+}

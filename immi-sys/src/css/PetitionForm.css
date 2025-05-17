@@ -1,0 +1,6 @@
+@import '../css/UtilForm.css'; /* Import universal styles */
+
+.form-group-checkbox {
+  display: flex;
+  gap: 30px;
+}

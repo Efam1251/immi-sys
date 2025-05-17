@@ -1,0 +1,13 @@
+# .gitignore
+
+# Java (Spring Boot)
+backend/target/
+*.log
+
+# Node.js (React)
+frontend/node_modules/
+frontend/build/
+
+# Common
+.DS_Store
+.env

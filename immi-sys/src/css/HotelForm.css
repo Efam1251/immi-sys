@@ -1,0 +1,60 @@
+@import '../css/UtilForm.css';
+
+/* Import universal styles */
+
+.link-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.9rem;;
+}
+
+.link-button:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.fieldset-container-Amenity {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group-Amenity {
+  height: 200px;
+  overflow-y: auto;
+}
+
+.form-checkbox {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 3 columns */
+  gap: 10px;
+}
+
+.form-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+
+.amenity-search-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.amenity-search-container input[type="text"] {
+  width: 400px; /* or whatever longer size you like */
+  height: 36px;
+  padding: 6px 10px;
+  font-size: 14px;
+}
+
+.amenity-search-container .add-button {
+  margin-top: 25px;
+}

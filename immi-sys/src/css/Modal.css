@@ -1,0 +1,323 @@
+/* ================================
+   General Modal Styles
+================================== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: scale(0.95) translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-content {
+  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  animation: slideIn 0.3s ease-out;
+}
+
+.modal-content p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.payment-form-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* Makes it responsive on small screens */
+}
+
+.payment-form-row input,
+.payment-form-row select {
+  flex: 1;
+  min-width: 120px; /* Avoids fields getting too small */
+  padding: 8px;
+  font-size: 1rem;
+}
+
+
+/* ================================
+   Modal Entry/Exit Animation
+================================== */
+.modal-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-exit {
+  opacity: 1;
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* ================================
+   Close Button
+================================== */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #bbb;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close:hover {
+  color: #ff4c4c;
+  transform: rotate(90deg);
+}
+
+/* ================================
+   Modal Buttons
+================================== */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modal-btn {
+  width: 30%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+
+.modal-btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.modal-btn:first-child {
+  background-color: #28a745;
+  box-shadow: 0 3px 8px rgba(40, 167, 69, 0.4);
+}
+
+.modal-btn:first-child:hover:enabled {
+  background-color: #218838;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(40, 167, 69, 0.6);
+}
+
+.modal-btn:last-child {
+  background-color: #dc3545;
+  box-shadow: 0 3px 8px rgba(220, 53, 69, 0.4);
+}
+
+.modal-btn:last-child:hover:enabled {
+  background-color: #c82333;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(220, 53, 69, 0.6);
+}
+
+/* ================================
+   Error Message
+================================== */
+.error-message {
+  color: #ff4c4c;
+  font-size: 0.9rem;
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ================================
+   Modal Flex Layout
+================================== */
+.modal-flex-select {
+  display: flex;
+  gap: 10px;
+}
+
+/* ================================
+   Payments Section
+================================== */
+.previous-payments {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.previous-payments h4 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.payment-list-scroll {
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.payment-list-scroll ul,
+.previous-payments ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.payment-details span {
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.payment-id {
+  font-weight: bold;
+  color: #444;
+  min-width: 60px;
+}
+
+.payment-amount {
+  color: #1a7f37;
+  min-width: 80px;
+  text-align: right;
+}
+
+.payment-date {
+  color: #666;
+  min-width: 120px;
+  text-align: right;
+}
+
+.cancel-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #c0392b;
+}
+
+/* ================================
+   Table Styling
+================================== */
+.document-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.document-table th,
+.document-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.document-table th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+}
+
+.document-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.document-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* ================================
+   Link Styling
+================================== */
+.view-link {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-link:hover {
+  text-decoration: underline;
+  color: #45a049;
+}
+
+/* ================================
+   Fallback Text Styling
+================================== */
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* ================================
+   Print Styling
+================================== */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-receipt,
+  .print-receipt * {
+    visibility: visible !important;
+  }
+
+  .print-receipt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    z-index: 9999;
+  }
+}

@@ -1,0 +1,19 @@
+@import '../css/UtilForm.css'; /* Shared form styles if needed */
+/* ===================== State List Component Styles ===================== */
+
+/* Column Width Customization */
+.state-id {
+  width: 10%;
+}
+
+.state-name {
+  width: 30%;
+}
+
+.state-code {
+  width: 30%;
+}
+
+.state-country {
+  width: 30%;
+}

@@ -1,0 +1,84 @@
+@import '../css/UtilList.css'; /* Import universal styles */
+
+/* ===================== Form List Component Styles ===================== */
+
+.form-list-container {
+  margin: auto;
+  width: 95%;
+  max-width: 1400px; /* Keeps width consistent */
+  background-color: #ffffff; /* White background for the container */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Table Header */
+.form-list-header {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Table Styling */
+.form-list-container .list-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures exact column widths */
+  background-color: #ffffff; /* Ensures background stays white */
+}
+
+/* === Column Widths === */
+.form-list-container .list-table th.form-id,
+.form-list-container .list-table td.form-id {
+  width: 5%;
+}
+
+.form-list-container .list-table th.form-name,
+.form-list-container .list-table td.form-name {
+  width: 20%;
+}
+
+.form-list-container .list-table th.form-description,
+.form-list-container .list-table td.form-description {
+  width: 45%;
+}
+
+.form-list-container .list-table th.form-webaddress,
+.form-list-container .list-table td.form-webaddress {
+  width: 30%;
+}
+
+/* Row Styling with Zebra Striping */
+.form-list-container .list-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9; /* Light gray for even rows */
+}
+
+.form-list-container .list-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White background for odd rows */
+}
+
+/* Optional Scrollable Container */
+.form-list-container .list-table-container {
+  max-height: 450px; /* Set max height for scrollable area */
+  overflow-y: auto;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+/* Row Padding and Styling */
+.form-list-container .list-table tbody td {
+  padding: 10px 15px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  overflow-wrap: break-word;
+}
+
+/* Hoverable Row */
+.list-clickable-row:hover {
+  background-color: #e0e0e0;
+  cursor: pointer;
+  font-weight: bold;
+}
+

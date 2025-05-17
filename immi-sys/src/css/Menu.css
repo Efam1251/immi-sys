@@ -1,0 +1,142 @@
+/* Menu container in sidebar */
+.menu-container {
+  width: 215px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 10px;
+  overflow: visible;
+  /* ✅ Required */
+}
+
+/* Optional styling container for logo and nav */
+.menu-subcontainer {
+  padding: 10px 15px;
+  background-color: #e9e7e7;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+}
+
+/* Logo */
+.logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 30px;
+  transition: transform 0.4s ease;
+}
+
+.menu-container:hover .logo {
+  transform: scale(1.5);
+}
+
+/* Navigation list */
+#nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#nav>li {
+  position: relative;
+  margin: 5px 0;
+}
+
+#nav>li>a {
+  display: block;
+  padding: 10px 15px;
+  color: #087d9b;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+#nav>li>a:hover,
+#nav>li.current>a {
+  background: linear-gradient(45deg, #16a085, #1abc9c);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateX(5px);
+}
+
+#nav ul {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #e9e7e7;
+  padding: 12px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  z-index: 99999;
+  /* Highest */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+/* Show submenu on hover */
+#nav>li:hover>ul {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* Position nested submenus (sub-submenus) */
+#nav ul ul {
+  left: 100%;
+  top: 0;
+}
+
+#nav ul li a {
+  padding: 10px 20px;
+  display: block;
+  font-size: 14px;
+  color: #4c5fbc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+#nav ul li a:hover {
+  background: linear-gradient(45deg, #16a085, #1abc9c);
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Dropdown arrow for sidebar */
+#nav>li>a::after {
+  content: ' ▼';
+  font-size: 10px;
+  margin-left: 5px;
+  float: right;
+  transition: transform 0.3s ease;
+}
+
+#nav>li:hover>a::after {
+  transform: rotate(180deg);
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li.separator {
+  border-top: 1px solid #ccc;  /* Adds a horizontal line */
+  margin: 5px 0;  /* Optional: Adds space around the separator */
+  padding: 5px 0; /* Optional: Adds some padding around the line */
+  text-align: center;  /* Centers the "----" text */
+}
+
+ul li.separator span {
+  color: #777;  /* Optional: Change the color of the separator text */
+  font-style: italic;  /* Optional: Italicize the separator */
+}

@@ -1,0 +1,236 @@
+/* The modal container */
+.petition-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.petition-modal-content {
+  background-color: white;
+  padding: 30px;
+  width: 800px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.petition-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.petition-modal-header {
+  font-size: 24px;
+  margin-top: 0;
+  text-align: center; /* Centers text horizontally */
+}
+
+.petition-modal label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.petition-modal-input-group {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  gap: 10px; /* Adds spacing between label and span */
+}
+
+.petition-modal-input-group label {
+  font-weight: bold; /* Optional: Makes labels bold */
+  min-width: 120px; /* Adjusts label width to align spans */
+}
+
+.petition-modal-input-group span {
+  flex-grow: 1; /* Allows span to take remaining space */
+}
+
+.petition-modal-row {
+  display: flex;
+  justify-content: left;
+  gap: 10px;
+}
+
+.petition-modal-input-group input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.petition-modal .petition-modal-flex-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.petition-modal .petition-add-button {
+  background-color: #a8cdf7;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.petition-modal .petition-add-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Align buttons to the right side */
+.petition-modal-buttons {
+  display: flex;
+  justify-content: flex-end; /* Aligns buttons to the right */
+  gap: 10px; /* Adds space between buttons */
+  align-items: center; /* Ensures buttons are vertically centered */
+}
+
+.petition-modal .petition-modal-btn-small {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.petition-modal .petition-modal-btn-small:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.petition-modal .error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.petition-modal .petition-table-container {
+  max-height: 300px; /* Limit the height of the table body */
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+}
+
+.petition-modal .petition-modal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* Ensure the table header remains fixed */
+.petition-modal .petition-modal-table thead {
+  position: sticky;
+  top: 0;
+  background-color: #e3e0e0;
+  z-index: 10;
+}
+
+.petition-modal .petition-modal-table tbody tr:hover {
+  background-color: #f1f1f1; /* Light background color on hover */
+  cursor: pointer; /* Changes cursor to pointer for better UX */
+}
+
+.petition-modal .petition-modal-table tbody tr:hover td {
+  color: #333; /* Darker text color for better visibility */
+}
+
+/* Table cell styles */
+.petition-modal .petition-modal-table th,
+.petition-modal .petition-modal-table td {
+  padding: 5px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.petition-modal .petition-view-link {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.petition-modal .petition-view-link:hover {
+  text-decoration: underline;
+}
+
+.petition-modal .petition-delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.petition-modal .petition-delete-button:hover {
+  background-color: #c82333;
+}
+
+.petition-dependents-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.petition-dependents-table th,
+.petition-dependents-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.petition-dependents-table th {
+  background-color: #f2f2f2;
+}
+
+.delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+.dropdown-container {
+  position: absolute;
+  top: 100%; /* Places it directly below the input field */
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 150px; /* Limit height for scrollable list */
+  overflow-y: auto; /* Enable scrolling if list overflows */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.dropdown-item {
+  padding: 0.5rem;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0; /* Optional: Separate items */
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+.dropdown-item:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}

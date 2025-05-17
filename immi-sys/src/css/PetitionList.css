@@ -1,0 +1,23 @@
+@import '../css/UtilList.css'; /* Import universal styles */
+
+/* ===================== Petition List Component Styles ===================== */
+
+.petition-petitioner {
+  width: 25%;
+}
+
+.petition-beneficiary {
+  width: 25%;
+}
+
+.petition-uscisNumber {
+  width: 10%;
+}
+
+.petition-caseNumber {
+  width: 15%;
+}
+
+.petition-category {
+  width: 15%;
+}
